@@ -131,6 +131,8 @@ public class LoginActivity extends BaseEventBusActivity {
                 break;
             case R.id.callKefuBtn:
                 break;
+            default:
+                break;
         }
     }
 }
