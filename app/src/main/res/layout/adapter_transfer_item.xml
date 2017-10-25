@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/dp_10"
+    app:contentPadding="@dimen/dp_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_10">
+
+        <LinearLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_10">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatarTv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/head_me" />
+
+            <TextView
+                android:id="@+id/nameTv"
+                style="@style/maintextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="2705A王旭" />
+
+            <TextView
+                android:id="@+id/type"
+                style="@style/contentTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/greenType"
+                android:drawableLeft="@drawable/transfer_type_2"
+                android:drawablePadding="@dimen/dp_10"
+                android:paddingBottom="5dp"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingTop="5dp"
+                android:text="置换"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/transfer_dianzanTv"
+                    style="@style/contentTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:drawableLeft="@drawable/transfer_dianzan"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="0"></TextView>
+
+                <TextView
+                    android:id="@+id/transfer_commentTv"
+                    style="@style/contentTextStyle"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_comment"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="0"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/contentTv"
+            style="@style/contentTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123" />
+
+        <com.jaeger.ninegridimageview.NineGridImageView
+            android:id="@+id/ngl_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            app:imgGap="3dp"
+            app:showStyle="grid"
+            app:singleImgSize="350dp" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+android {
+    compileSdkVersion ANDROID_BUILD_SDK_VERSION as int
+    buildToolsVersion ANDROID_BUILD_TOOLS_VERSION
+    defaultConfig {
+        minSdkVersion ANDROID_BUILD_MIN_SDK_VERSION as int
+        targetSdkVersion ANDROID_BUILD_TARGET_SDK_VERSION as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        textReport false
+        htmlReport false
+        xmlReport false
+    }
+    greendao {
+        schemaVersion 3
+        targetGenDir 'src/main/java'
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    // appcompat-v7包是必须的
+    compile 'me.yokeyword:fragmentation:1.1.4'
+// 如果想使用SwipeBack 滑动边缘退出Fragment/Activity功能，完整的添加规则如下：
+    compile 'me.yokeyword:fragmentation:1.1.4'
+// swipeback基于fragmentation, 如果是自定制SupportActivity/Fragment，则参照SwipeBackActivity/Fragment实现即可
+    compile 'me.yokeyword:fragmentation-swipeback:1.1.4'
+    //标题栏变色
+    compile 'com.jaeger.statusbarutil:library:1.4.0'
+    //注解包
+    compile 'com.jakewharton:butterknife:7.0.1'
+    //轮播
+    compile 'cn.bingoogolapple:bga-banner:2.1.7@aar'
+    compile 'cn.bingoogolapple:bga-titlebar:1.0.8@aar'
+    compile 'com.github.lygttpod:SuperTextView:2.1.4'
+    //tab显示页签
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    //必须使用
+    compile 'com.lzy.net:okgo:3.0.4'
+    //拍照及相册功能
+    compile 'com.jph.takephoto:takephoto_library:4.0.3'
+    // EventBus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //recycleView
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.12'
+    //工具库
+    compile 'com.blankj:utilcode:1.9.0'
+    //圆形头像
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.alibaba:fastjson:1.2.38'
+    compile 'com.google.code.gson:gson:2.5'
+    compile 'jp.wasabeef:glide-transformations:2.0.2'
+    compile 'com.github.hotchemi:permissionsdispatcher:2.3.2'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.3.2'
+    compile 'com.liaoinstan.springview:library:1.3.0'
+    compile 'com.ycjiang:imgepreviewlibrary:1.0.8'//图片播放器
+    compile 'com.jaeger.ninegridimageview:library:1.1.0'
+    compile 'com.melnykov:floatingactionbutton:1.3.0'
+    compile 'com.contrarywind:Android-PickerView:3.2.6'
+    compile 'com.github.hss01248:DialogUtil:1.1.6'
+    compile 'com.meetic.marypopup:marypopup:1.0.0'
+    compile 'com.meetic.dragueur:dragueur:1.0.3'
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#6E100B</color>
+    <color name="colorPrimary">#6E100B</color>
+    <color name="colorAccent">#6E100B</color>
+    <color name="colorOrange">#F4A115</color>
+    <color name="colorPrimaryPressed">#d81e06</color>
+    <color name="buttonBlue">#1afa29</color>
+    <color name="buttonBluePress">#45b613</color>
+    <color name="greenType">#3d9f83</color>
+    <color name="main_bg">#efeff4</color>
+    <color name="windowBackground">@android:color/white</color>
+    <color name="tab_unselect">#c9c9c9</color>
+    <color name="black">#4D4D4D</color>
+    <color name="gray">#8f8f8f</color>
+
+    <!--按下时80%的透明度-->
+    <color name="popupwindow_itembg_pressed">#2F2F2F</color>
+    <color name="popupwindow_itembg_checked">#8F8F8F</color>
+
+    <color name="maintab_titlebar_bg">#f8f8f8</color>
+    <color name="gray_line">#dedede</color>
+
+    <color name="titleblack">#353535</color>
+    <color name="contentGray">#999999</color>
+</resources>

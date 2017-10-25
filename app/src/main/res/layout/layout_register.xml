@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="御墅社区"
+        android:textColor="@color/colorPrimary"
+        android:textSize="32sp"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/actionsheet_top_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/account"
+                android:drawablePadding="10dp"
+                android:text="@string/system"
+                android:textColor="@color/contentGray"
+                android:textSize="@dimen/textSize_16"></TextView>
+
+            <EditText
+                android:id="@+id/accoutEt"
+                style="@style/maintextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_weight="2"
+                android:background="@null"
+                android:hint="如：10#501"
+                android:padding="@dimen/dp_10"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/actionsheet_middle_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/realname"
+                android:drawablePadding="10dp"
+                android:text="@string/realName"
+                android:textColor="@color/contentGray"
+                android:textSize="@dimen/textSize_16"></TextView>
+
+            <EditText
+                android:id="@+id/realNameEt"
+                style="@style/maintextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_weight="2"
+                android:background="@null"
+                android:hint="请输入姓名"
+                android:padding="@dimen/dp_10"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/actionsheet_middle_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/phone"
+                android:drawablePadding="10dp"
+                android:text="@string/phone"
+                android:textColor="@color/contentGray"
+                android:textSize="@dimen/textSize_16"></TextView>
+
+            <EditText
+                android:id="@+id/phoneEt"
+                style="@style/maintextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_weight="2"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:padding="@dimen/dp_10"></EditText>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/registerBtn"
+        style="@style/BtnRedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:enabled="true"
+        android:text="@string/register"></Button>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="@dimen/text_margin">
+
+            <TextView
+                android:id="@+id/loginBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="已有账号登录"
+                android:textColor="@color/colorPrimary" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@color/contentGray"></View>
+
+            <TextView
+                android:id="@+id/callKefuBtn"
+                style="@style/contentTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="联系客服"></TextView>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

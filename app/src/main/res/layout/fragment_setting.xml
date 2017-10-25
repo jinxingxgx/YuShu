@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.bingoogolapple.titlebar.BGATitleBar
+        android:id="@+id/titlebar"
+        style="@style/TitleBar"
+        app:bgatitlebar_leftDrawable="@drawable/ic_arrow_back"
+        app:bgatitlebar_titleDrawablePadding="3dp"
+        app:bgatitlebar_titleText="个人资料" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/avatarTv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_height"
+                app:sLeftTextString="@string/setting_head"
+                app:sRightIconHeight="45dp"
+                app:sRightIconRes="@mipmap/head_me"
+                app:sRightIconWidth="45dp" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/nickNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_height"
+                app:sLeftTextString="昵称"
+                app:sRightIconRes="@drawable/next_item"></com.allen.library.SuperTextView>
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/realNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_height"
+                app:sLeftTextString="真实姓名"
+                app:sRightIconRes="@drawable/next_item"></com.allen.library.SuperTextView>
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/genderTv"
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_height"
+                app:sLeftTextString="性别"
+                app:sRightIconRes="@drawable/next_item"></com.allen.library.SuperTextView>
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/phoneTv"
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_height"
+                app:sLeftTextString="手机"
+                app:sRightIconRes="@drawable/next_item"></com.allen.library.SuperTextView>
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/birthdayTv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_height"
+                app:sLeftTextString="出生年月"
+                app:sRightIconRes="@drawable/next_item"></com.allen.library.SuperTextView>
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/privacyTv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_height"
+                app:sLeftTextString="隐私设置"
+                app:sRightIconRes="@drawable/next_item"></com.allen.library.SuperTextView>
+
+            <com.allen.library.SuperButton
+                android:id="@+id/exitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:layout_marginRight="@dimen/text_margin"
+                android:layout_marginTop="40dp"
+                android:text="退出登录"
+                android:textColor="@color/white"
+                app:sCornersRadius="@dimen/dp_10"
+                app:sSelectorNormalColor="@color/colorPrimary"
+                app:sSelectorPressedColor="@color/colorPrimaryPressed"
+                app:sSolidColor="@color/colorPrimary"
+                app:sUseSelector="true"></com.allen.library.SuperButton>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

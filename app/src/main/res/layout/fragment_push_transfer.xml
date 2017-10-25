@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.bingoogolapple.titlebar.BGATitleBar
+        android:id="@+id/titlebar"
+        style="@style/TitleBar"
+        app:bgatitlebar_leftDrawable="@drawable/ic_arrow_back"
+        app:bgatitlebar_titleDrawablePadding="3dp"
+        app:bgatitlebar_titleText="发布宝贝" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pushBtn"
+        android:layout_below="@+id/titlebar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/title"
+                style="@style/maintextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bga_banner_selector_point_solid"
+                android:gravity="top"
+                android:hint="宝贝标题"
+                android:padding="@dimen/text_margin"
+                android:textSize="@dimen/sp_14"></EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"></View>
+
+            <EditText
+                android:id="@+id/contentTv"
+                style="@style/maintextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/bga_banner_selector_point_solid"
+                android:gravity="top"
+                android:hint="在这里详细描述一下你的宝贝吧"
+                android:minHeight="100dp"
+                android:padding="@dimen/text_margin"
+                android:textSize="@dimen/sp_14"></EditText>
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/typeStv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:sDividerLineType="both"
+                app:sLeftTextString="置换类型"
+                app:sRightIconRes="@drawable/next_item"
+                app:sRightTextColor="@color/contentGray"
+                app:sRightTextString="置换"></com.allen.library.SuperTextView>
+
+            <TextView
+                android:id="@+id/takePhotosTv"
+                style="@style/contentTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:drawableTop="@drawable/add_pic"
+                android:text="添加照片"></TextView>
+
+            <com.xgx.yushu.widget.MultiImageView
+                android:id="@+id/ngl_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.allen.library.SuperButton
+        android:id="@+id/pushBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_10"
+        android:text="发布"
+        android:textColor="@color/white"
+        app:sCornersRadius="@dimen/dp_10"
+        app:sSelectorPressedColor="@color/colorPrimaryPressed"
+        app:sSolidColor="@color/colorPrimary"></com.allen.library.SuperButton>
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.bingoogolapple.titlebar.BGATitleBar
+        android:id="@+id/titlebar"
+        style="@style/TitleBar"
+        app:bgatitlebar_titleDrawablePadding="3dp"
+        app:bgatitlebar_titleText="御墅" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <cn.bingoogolapple.bgabanner.BGABanner
+                android:id="@+id/banner_main_default"
+                style="@style/BannerDefaultStyle"
+                app:banner_indicatorGravity="bottom|right"
+                app:banner_isNeedShowIndicatorOnOnlyOnePage="true"
+                app:banner_isNumberIndicator="true"
+                app:banner_numberIndicatorBackground="@drawable/shape_number_indicator_background"
+                app:banner_numberIndicatorTextColor="@android:color/white"
+                app:banner_numberIndicatorTextSize="10sp"
+                app:banner_pointAutoPlayAble="true"
+                app:banner_pointContainerBackground="@android:color/transparent"
+                app:banner_transitionEffect="defaultEffect" />
+
+            <TextView
+                android:id="@+id/home_broadcast"
+                style="@style/maintextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/home_broadcast"
+                android:drawablePadding="@dimen/dp_10"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="@dimen/text_margin"
+                android:singleLine="true"
+                android:text="小区广播:xxxxxxx"
+                android:textSize="@dimen/sp_14"></TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_line"></View>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/menu_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line"></View>
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/morePicTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                app:sDividerLineType="none"
+                app:sLeftTextColor="@color/titleblack"
+                app:sLeftTextString="@string/share_pic"
+                app:sRightIconRes="@drawable/next_item"
+                app:sRightTextColor="@color/contentGray"
+                app:sRightTextString="@string/more" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/menu_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line"></View>
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/moreVideoTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                app:sDividerLineType="none"
+                app:sLeftTextColor="@color/titleblack"
+                app:sLeftTextString="@string/share_video"
+                app:sRightIconRes="@drawable/next_item"
+                app:sRightTextColor="@color/contentGray"
+                app:sRightTextString="@string/more" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/menu_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
